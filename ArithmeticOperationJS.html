@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function Result()
+        {
+            var leftOperand = document.forms[0].elements[0];
+            var operator = document.forms[0].elements[1];
+            var rightOperand = document.frm.txtSecondNo;
+            var Result = document.getElementById("txtResult");
+            switch(operator.options[operator.selectedIndex].text)
+            {
+                case "+": 
+                    Result.value = parseInt(leftOperand.value) + parseInt(rightOperand.value);
+                    break;
+                case "-":
+                    Result.value = parseInt(leftOperand.value) - parseInt(rightOperand.value);
+                    brea;
+                case "/":
+                    Result.value = parseInt(leftOperand.value) / parseInt(rightOperand.value);
+                    break;
+                case "*":
+                    Result.value = parseInt(leftOperand.value) * parseInt(rightOperand.value);
+                    break;
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="frm" id="frm">
+        <h1> JS Dom Example with Arithmetic Operation</h1>
+        Enter First No: &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="text" name="txtFirstNo" id="txtFirstNo" />
+        <br /><br />
+        Operator(+ - * /): &nbsp; &nbsp;
+        <!--<input type="text" name="txtOperator" id="txtOperator" width="30" />-->
+        <select id="ddlOperator" name="ddlOperator">
+            <option value="txtPlus">+</option>
+            <option value="txtMinus">-</option>
+            <option value="txtDiv">/</option>
+            <option value="txtMult">*</option>
+        </select>
+        <br /><br />
+        Enter Second No: &nbsp;&nbsp;
+        <input type="text" name="txtSecondNo" id="txtSecondNo" />
+        <br /><br />
+        <input type="button" name="btnResult" id="btnResult" value="       Result       "  onclick="Result()"/>&nbsp;
+        <input type="text" name="txtResult" id="txtResult" readonly="readonly" />
+    </form>
+</body>
+</html>
