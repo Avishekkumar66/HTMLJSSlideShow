@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        x = 1;
+        function fPrevNext(y) {
+            if (y == 1)
+            {
+                if (x > 1)
+                    document.img.src = "Images/" + --x + ".jpg";
+            }
+            else
+            {
+                if (x < 10)
+                    document.img.src = "Images/" + ++x + ".jpg";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="frm" id="frm">
+        <img id="img" src="Images/1.jpg" height="300" width="300" name ="img" />
+        <br />
+        <input id="btnPrev" type="button" name="btnPrev" value="<<" onclick="fPrevNext(1)" />
+        <input id="btnNext" type="button" name="btnNext" value=">>" onclick="fPrevNext(2)" />
+    </form>
+</body>
+</html>
